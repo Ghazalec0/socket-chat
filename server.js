@@ -30,20 +30,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 // ========================================
-// MongoDB Connection
-// ========================================
-
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("MongoDB connected successfully");
-  })
-  .catch((error) => {
-    console.error("MongoDB connection error:", error);
-  });
-
-// ========================================
-// MESSAGE MODEL
+// MESSAGE MODEL 
 // ========================================
 
 const messageSchema = new mongoose.Schema(
@@ -277,6 +264,23 @@ io.on("connection", async (socket) => {
 
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+
+    console.log("MongoDB connected successfully");
+
+    server.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error(
+      "MongoDB connection error:",
+      error.message
+    );
+
+    process.exit(1);
+  }
+};
+
+startServer();
