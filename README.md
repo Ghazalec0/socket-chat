@@ -33,3 +33,33 @@ chat-socketio/
 ├── package.json        # Project dependencies and scripts
 ├── readme.md           # Documentation file
 └── server.js           # Main application entry point & Socket.IO server
+
+Getting Started
+Follow these instructions to set up and run the project locally.
+
+Prerequisites
+Node.js installed on your machine.
+
+A running MongoDB instance (local or Atlas cluster).
+
+Installation & Running
+Clone the repository:
+git clone 
+cd chat-socketio
+
+Install dependencies:
+npm install
+
+Configure environment variables:
+Create a .ENV file in the root directory and add:
+PORT=3000
+MONGO_URI=your_mongodb_connection_string_here
+
+Run the application:
+
+For production: npm start
+
+For development: npm run dev
+
+Open in Browser:
+Navigate to http://localhost:3000 in your web browser to start chatting!
