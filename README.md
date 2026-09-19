@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Real-Time Socket Chat App
 A real-time chat application built with Node.js, Express, Socket.IO, and MongoDB, featuring real-time messaging, typing indicators, and online user counts.
 
@@ -63,3 +64,6 @@ npm start
 
 Open in Browser:
 Navigate to http://localhost:5000 in your web browser to start chatting!
+=======
+
+>>>>>>> 6ee87363561627e410946ea3881c46e633b77f5d
