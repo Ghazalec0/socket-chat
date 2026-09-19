@@ -20,6 +20,7 @@ A real-time chat application built with Node.js, Express, Socket.IO, and MongoDB
 
 ## Project Structure
 
+```text
 chat-socketio/
 ├── node_modules/
 ├── Views/
@@ -32,33 +33,3 @@ chat-socketio/
 ├── package.json
 ├── readme.md
 └── server.js
-
-## Getting Started
-
-Follow these instructions to set up and run the project locally.
-
-### Prerequisites
-
-- Node.js installed on your machine.
-- A running MongoDB instance or cluster connection string.
-
-### Installation & Running
-
-1. Clone the repository:
-git clone <repository-url>
-cd chat-socketio
-
-2. Install dependencies:
-npm install
-
-3. Configure environment variables:
-Create a .env file in the root directory and add your configurations:
-PORT=5000
-MONGO_URI=mongodb://ghazaleco:NlmWYXZaKV3xTyEx@ac-bzm9aub-shard-00-00.a4hpi2q.mongodb.net:27017,ac-bzm9aub-shard-00-01.a4hpi2q.mongodb.net:27017,ac-bzm9aub-shard-00-02.a4hpi2q.mongodb.net:27017/Chat_Socket?ssl=true&replicaSet=atlas-spqwbr-shard-0&authSource=admin&appName=Cluster0
-
-4. Run the application:
-- For development (with Nodemon): npm run dev
-- For production: npm start
-
-5. Open in Browser:
-Navigate to http://localhost:5000 in your web browser to start chatting!
